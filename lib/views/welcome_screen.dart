@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/views/pages/auth/login_screen.dart';
 import 'package:gmu_app/views/pages/home_screen.dart';
 import 'package:gmu_app/widgets/app_bar_widget.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
@@ -60,7 +61,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       context,
                       PageTransition(
                         type: PageTransitionType.fade,
-                        child: const HomeScreen(),
+                        child: const LoginScreen(),
                       ),
                     );
                     setState(() {
