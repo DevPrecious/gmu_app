@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
 
-class RoundButtonWidget extends StatelessWidget {
-  const RoundButtonWidget({
+class ButtonIconWidget extends StatelessWidget {
+  const ButtonIconWidget({
     super.key,
     required this.icon,
-    required this.color,
     this.onTap,
-    this.backgroundColor,
   });
 
   final Icon icon;
-  final Color color;
   final VoidCallback? onTap;
-  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(25),
+        width: 30,
+        height: 30,
         decoration: BoxDecoration(
-          color: backgroundColor,
-          shape: BoxShape.circle,
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(
+            15,
+          ),
         ),
         child: icon,
       ),

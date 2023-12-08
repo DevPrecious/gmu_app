@@ -72,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Center(
               child: RoundButtonWidget(
+                backgroundColor: primaryColor,
                 onTap: () {
                   Get.to(
                     transition: Transition.zoom,

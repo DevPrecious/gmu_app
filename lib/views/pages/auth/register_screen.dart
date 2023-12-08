@@ -84,6 +84,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             const Center(
               child: RoundButtonWidget(
+                backgroundColor: primaryColor,
                 icon: Icon(
                   Icons.arrow_forward_ios,
                   color: Colors.white,

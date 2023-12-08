@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/views/pages/single_player.dart';
 import 'package:gmu_app/widgets/app_bar_widget.dart';
 import 'package:gmu_app/widgets/get_started_widget.dart';
 import 'package:gmu_app/widgets/music_card_widget.dart';
@@ -88,7 +90,14 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20.h,
             ),
-            const MusicCard(),
+            MusicCard(
+              onTap: () {
+                Get.to(
+                  transition: Transition.circularReveal,
+                  () => const SinglePlayer(),
+                );
+              },
+            ),
             SizedBox(
               height: 20.h,
             ),
