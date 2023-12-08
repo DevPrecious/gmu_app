@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:gmu_app/constants/colors.dart';
-import 'package:gmu_app/views/pages/auth/register_screen.dart';
 import 'package:gmu_app/widgets/round_button_widget.dart';
 import 'package:gmu_app/widgets/text_field_widget.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   late final TextEditingController _usernameController;
   late final TextEditingController _passwordController;
 
@@ -62,6 +61,20 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 20.h,
             ),
             TextFieldWidget(
+              hintText: 'Full name',
+              controller: _usernameController,
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            TextFieldWidget(
+              hintText: 'Email address',
+              controller: _usernameController,
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            TextFieldWidget(
               hintText: 'Password',
               isPassword: true,
               controller: _passwordController,
@@ -84,13 +97,10 @@ class _LoginScreenState extends State<LoginScreen> {
             Center(
               child: TextButton(
                 onPressed: () {
-                  Get.to(
-                    transition: Transition.upToDown,
-                    () => const RegisterScreen(),
-                  );
+                  Get.back();
                 },
                 child: Text(
-                  'Create Account',
+                  'Login',
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
