@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/controllers/player/music_player_controller.dart';
 import 'package:gmu_app/widgets/button_icon_widget.dart';
 import 'package:gmu_app/widgets/round_button_widget.dart';
 
@@ -15,6 +16,14 @@ class SinglePlayer extends StatefulWidget {
 
 class _SinglePlayerState extends State<SinglePlayer> {
   double _value = 20;
+
+  late final MusicPlayerController _musicPlayerController;
+
+  @override
+  void initState() {
+    _musicPlayerController = Get.put(MusicPlayerController());
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -148,20 +157,31 @@ class _SinglePlayerState extends State<SinglePlayer> {
                       Icons.arrow_back_ios,
                       size: 30.w,
                     ),
-                    const RoundButtonWidget(
-                      backgroundColor: primaryColor,
-                      icon: Icon(
-                        Icons.play_arrow,
-                        color: Colors.white,
-                      ),
-                      color: Colors.white,
+                    GetBuilder(
+                      init: _musicPlayerController,
+                      builder: (controller) {
+                        return RoundButtonWidget(
+                          onTap: () => controller.changeMusicMode(),
+                          backgroundColor: primaryColor,
+                          icon: controller.isPlaying
+                              ? const Icon(
+                                  Icons.pause,
+                                  color: Colors.white,
+                                )
+                              : const Icon(
+                                  Icons.play_arrow,
+                                  color: Colors.white,
+                                ),
+                          color: Colors.white,
+                        );
+                      },
                     ),
                     Icon(
                       Icons.arrow_forward_ios,
                       size: 30.w,
                     ),
                     Icon(
-                      Icons.repeat,
+                      Icons.repeat_one,
                       size: 30.w,
                     ),
                   ],

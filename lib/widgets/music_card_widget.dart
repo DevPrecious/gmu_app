@@ -24,7 +24,11 @@ class MusicCard extends StatelessWidget {
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
-                    color: Colors.red[700],
+                    image: const DecorationImage(
+                      image: AssetImage(
+                        'assets/images/bidemi.jpeg',
+                      ),
+                    ),
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
