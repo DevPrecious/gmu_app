@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gmu_app/constants/colors.dart';
-import 'package:gmu_app/views/welcome_screen.dart';
+import 'package:gmu_app/welcome_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
