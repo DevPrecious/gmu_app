@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/constants/constants.dart';
 import 'package:gmu_app/welcome_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           theme: ThemeData(
             appBarTheme: const AppBarTheme(
-              backgroundColor: backgroundColor,
+              backgroundColor: UiConstants.backgroundColor,
             ),
-            scaffoldBackgroundColor: backgroundColor,
+            scaffoldBackgroundColor: UiConstants.backgroundColor,
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
             textTheme: GoogleFonts.josefinSansTextTheme(

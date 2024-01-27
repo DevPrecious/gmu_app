@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/constants/constants.dart';
 
 class GetStartedWidget extends StatelessWidget {
   const GetStartedWidget({
@@ -54,7 +54,7 @@ class GetStartedWidget extends StatelessWidget {
               color: Colors.transparent,
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                color: primaryColor,
+                color: UiConstants.primaryColor,
               ),
             ),
             child: Text(

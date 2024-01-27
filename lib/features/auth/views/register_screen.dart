@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/constants/constants.dart';
 import 'package:gmu_app/features/auth/views/login_screen.dart';
 import 'package:gmu_app/widgets/round_button_widget.dart';
 import 'package:gmu_app/widgets/text_field_widget.dart';
@@ -85,12 +85,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             const Center(
               child: RoundButtonWidget(
-                backgroundColor: primaryColor,
+                backgroundColor: UiConstants.primaryColor,
                 icon: Icon(
                   Icons.arrow_forward_ios,
                   color: Colors.white,
                 ),
-                color: primaryColor,
+                color: UiConstants.primaryColor,
               ),
             ),
             SizedBox(

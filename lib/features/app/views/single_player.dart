@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/constants/constants.dart';
 import 'package:gmu_app/controllers/player/music_player_controller.dart';
 import 'package:gmu_app/widgets/button_icon_widget.dart';
 import 'package:gmu_app/widgets/round_button_widget.dart';
@@ -114,7 +114,7 @@ class _SinglePlayerState extends State<SinglePlayer> {
                     ),
                     const Icon(
                       CupertinoIcons.heart_fill,
-                      color: primaryColor,
+                      color: UiConstants.primaryColor,
                     ),
                   ],
                 ),
@@ -125,8 +125,8 @@ class _SinglePlayerState extends State<SinglePlayer> {
                   min: 0.0,
                   max: 100.0,
                   value: _value,
-                  thumbColor: primaryColor,
-                  activeColor: primaryColor,
+                  thumbColor: UiConstants.primaryColor,
+                  activeColor: UiConstants.primaryColor,
                   onChanged: (value) {
                     setState(() {
                       _value = value;
@@ -162,7 +162,7 @@ class _SinglePlayerState extends State<SinglePlayer> {
                       builder: (controller) {
                         return RoundButtonWidget(
                           onTap: () => controller.playMusic(),
-                          backgroundColor: primaryColor,
+                          backgroundColor: UiConstants.primaryColor,
                           icon: controller.isPlaying
                               ? const Icon(
                                   Icons.pause,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/constants/constants.dart';
 import 'package:gmu_app/features/auth/views/login_screen.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
 import 'package:page_transition/page_transition.dart';
@@ -75,7 +75,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       },
                     );
                   },
-                  activeColor: primaryColor,
+                  activeColor: UiConstants.primaryColor,
                   buttonWidget: const Icon(
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.grey,

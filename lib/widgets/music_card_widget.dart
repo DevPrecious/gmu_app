@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/constants/constants.dart';
 
 class MusicCard extends StatelessWidget {
   const MusicCard({
@@ -56,7 +56,7 @@ class MusicCard extends StatelessWidget {
                   padding: const EdgeInsets.all(3),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: primaryColor,
+                    color: UiConstants.primaryColor,
                   ),
                   child: const Icon(
                     Icons.play_arrow,

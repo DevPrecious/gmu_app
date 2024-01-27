@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:gmu_app/constants/colors.dart';
+import 'package:gmu_app/constants/constants.dart';
 import 'package:gmu_app/features/app/views/home_screen.dart';
 import 'package:gmu_app/features/auth/views/register_screen.dart';
 import 'package:gmu_app/widgets/round_button_widget.dart';
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Center(
               child: RoundButtonWidget(
-                backgroundColor: primaryColor,
+                backgroundColor: UiConstants.primaryColor,
                 onTap: () {
                   Get.to(
                     transition: Transition.zoom,
@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Icons.arrow_forward_ios,
                   color: Colors.white,
                 ),
-                color: primaryColor,
+                color: UiConstants.primaryColor,
               ),
             ),
             SizedBox(
